@@ -47,22 +47,23 @@
       if (deviceType === "Android") {
         window.location.href = "https://play.google.com/store/apps/details?id=app.wildhood.wildhood_app";
       }
+      
+      if (deviceType === "Other") {
+        window.location.href = "https://www.wildhood.app";
+      }
+      
     }
     
     window.onload = function() {
       var deviceType = detectDevice();
       document.getElementById("device-type").textContent = deviceType;
-      
-      if (deviceType === "Other") {
-        document.getElementById("app-buttons").style.display = "block";
-      } else {
-        redirect();
-      }
+      redirect();
+
     };
   </script>
 </head>
 <body>
-  <h1>Welcome!</h1>
+  <h1>Download!</h1>
   <p>Your device type: <span id="device-type"></span></p>
   
   <div id="app-buttons" style="display: none;">
